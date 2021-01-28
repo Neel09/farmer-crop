@@ -9,15 +9,15 @@
 		<relativePath/>
 	</parent>
     
-    <groupId>org.jai.kisan</groupId>
+    <groupId>org.jai.kissan</groupId>
     <artifactId>farmer-crop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <name>farmer-crop</name>
-	<description>Jai Kisan project</description>
+	<description>Jai Kissan project</description>
 	
-    <properties>
+    <!--<properties>
 		<java.version>11</java.version>
-	</properties>
+	</properties>-->
     
 	<dependencies>
 		<dependency>
@@ -30,6 +30,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

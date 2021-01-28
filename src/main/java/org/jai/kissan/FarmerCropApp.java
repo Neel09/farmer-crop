@@ -1,13 +1,13 @@
-package org.jai.kisan.jaikisanparent;
+package org.jai.kissan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JaiKisanParentApplication {
+public class FarmerCropApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JaiKisanParentApplication.class, args);
+		SpringApplication.run(FarmerCropApp.class, args);
 	}
 
 }
