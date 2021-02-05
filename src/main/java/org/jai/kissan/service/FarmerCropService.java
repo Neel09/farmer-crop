@@ -1,11 +1,15 @@
 package org.jai.kissan.service;
 
-import org.jai.kissan.model.Crop;
-import org.jai.kissan.model.Farmer;
+import org.jai.kissan.api.farmer.crop.model.Crop;
+import org.jai.kissan.api.farmer.crop.model.Farmer;
 
 public interface FarmerCropService {
 
-    public void doFarmerRegistration(Farmer farmer);
+    public String doFarmerRegistration(Farmer farmer);
 
-    public void createCrop(Crop crop);
+    public String createCrop(Crop crop);
+
+    public Farmer getFarmer(String farmerIdentityCode);
+
+    public Crop getCrop(String cropIdentityCode);
 }

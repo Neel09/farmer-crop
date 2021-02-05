@@ -1,4 +1,4 @@
-package org.jai.kissan.model;
+package org.jai.kissan.persistence.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,13 +6,16 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import org.jai.kissan.commonutils.sequence.generator.StringPrefixedSequenceIdGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Setter
 @Getter
 @NoArgsConstructor
-@Entity
-public class Crop {
+@Entity(name = "crops")
+public class CropEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "crop_identity_seq")

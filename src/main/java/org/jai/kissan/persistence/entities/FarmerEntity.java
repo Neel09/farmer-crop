@@ -1,4 +1,4 @@
-package org.jai.kissan.model;
+package org.jai.kissan.persistence.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,8 +12,9 @@ import javax.persistence.*;
 @Setter
 @Getter
 @NoArgsConstructor
-@Entity
-public class Farmer {
+@Entity(name = "farmers")
+public class FarmerEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "farmer_identity_seq")
     @GenericGenerator(
@@ -22,7 +23,7 @@ public class Farmer {
             parameters = {
                     @Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
                     @Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "FarmerID_"),
-                    @Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%09d") })
+                    @Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%09d")})
     private String identityCode;
 
     private String name;
