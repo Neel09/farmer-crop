@@ -5,5 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface FarmerRepository extends CrudRepository<FarmerEntity, String> {
 
-    FarmerEntity findByIdentityCode(String farmerIdentityCode);
+	FarmerEntity findByIdentityCode(String farmerIdentityCode);
+
+	void deleteByIdentityCode(String farmerIdentityCode);
 }

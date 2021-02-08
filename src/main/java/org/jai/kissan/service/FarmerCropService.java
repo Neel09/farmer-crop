@@ -5,11 +5,13 @@ import org.jai.kissan.api.farmer.crop.model.Farmer;
 
 public interface FarmerCropService {
 
-    public String doFarmerRegistration(Farmer farmer);
+	public String doFarmerRegistration(Farmer farmer);
 
-    public String createCrop(Crop crop);
+	public String createCrop(Crop crop);
 
-    public Farmer getFarmer(String farmerIdentityCode);
+	public Farmer getFarmer(String farmerIdentityCode);
 
-    public Crop getCrop(String cropIdentityCode);
+	public Crop getCrop(String cropIdentityCode);
+
+	public void deleteFarmer(String farmerIdentityCode);
 }
