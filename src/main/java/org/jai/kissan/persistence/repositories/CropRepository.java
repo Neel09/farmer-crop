@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CropRepository extends CrudRepository<CropEntity, String> {
 
-    CropEntity findByIdentityCode(String cropIdentityCode);
+	CropEntity findByIdentityCode(String cropIdentityCode);
 }
