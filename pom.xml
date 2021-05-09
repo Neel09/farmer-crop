@@ -23,9 +23,28 @@
 		<jai.kissan.common.version>2.0.0-SNAPSHOT</jai.kissan.common.version>
 		<jai.kissan.api.version>2.1.0-SNAPSHOT</jai.kissan.api.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<spring.cloud-version>2020.0.0</spring.cloud-version>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring.cloud-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -94,11 +113,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-        			<jvmArguments>
-            			-Xms100m
-            			-Xmx200m
-        			</jvmArguments>
-    			</configuration>
+					<jvmArguments>
+						-Xms100m
+						-Xmx200m
+					</jvmArguments>
+				</configuration>
 			</plugin>
 
 			<!-- Required: To let lombok&mapstruct work together -->
